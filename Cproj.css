@@ -1,0 +1,302 @@
+/* Global Styles, Began 10/23/21 Below will be notes */
+    /* ((NOTES!)) 
+        (10/25/21 - 12:36am) + Added * & "Padding: 0 Auto;" to fix some additional errors
+            (NOTICE!) This will be a Universal Css Style Sheet!
+    */
+
+body {
+    margin: 0 auto;
+    background-color: #5A5A5A;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* End of Global */
+/*================*/
+
+/* Nav Styles, Began 10/23/21 Below will be notes */
+    /* ((NOTES!)) 
+     - 10/23/2021 Nav Implimentation will not work, requires a thorough look through, maybe something not properly transfering over? all Under-links relocated under Homepage,
+         5:57pm Fixed, "il" is not "li" + Folded ul into Nav 
+         - 6:01pm - Removed Overflow: Auto; + Changed Padding in Li a, .dropdown-btn from 18 x 22 to 18 x 10px
+            - (10/25/21) - "Removed Color & Added Transition @ 0.5s & 0.8s Ease-Out;" 
+    */
+
+nav ul {
+    display: inline-flexbox;
+    background-color: #011027;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+li a, .dropdown-btn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    text-decoration: none;
+}
+li a:hover, .dropdown-btn:hover .dropdown-btn {
+    background-color: rgb(26, 61, 83);
+    transition: 0.5s ease-out;
+    color: silver;
+}
+li.dropdown {
+    display: inline-block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(26, 61, 83);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+}
+.dropdown-menu a {
+    color: silver;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-menu a:hover {
+    background-color: #0f4a4e;
+    transition: 0.8s ease-out;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+/* End of Nav */
+/*================*/
+/* Header Styles, Began 10/23/21 Below will be notes */
+    /* ((NOTES!)) 
+    */
+
+a {
+    text-decoration: none;
+    color: silver;
+    font-weight: 200;
+}
+
+header {
+    background-color: #0c284d;
+    font-family: "Cambria", "Cochin", Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+.hwrap {
+    text-align: center;
+}
+
+.hwrap h1 {
+    font-weight: normal;
+    text-shadow: 8px 4px rgb(21, 113, 167);
+    font-size: 57px;
+    font-style: italic;
+    margin-bottom: -10px;
+    margin-top: -5px;
+}
+
+.hwrap h2 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 35px;
+}
+
+#bannerimg {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* End of Header Styles */
+/*================*/
+/* Project Styles, Began 10/24/21 Below will be notes */
+    /* ((NOTES!)) 
+        (10/25/21) Btw, add Imag & Sizes Later onto Folder ((REMINDER, DO IT OR NO ICE CREAM!))
+    */
+
+.project {
+    background: #546e85;
+    color: white;
+    padding: 40px;
+    padding-bottom: auto;
+}
+
+.project img {
+    width: 300px;
+    margin-right: 35px;
+}
+.project h3 {
+    margin-top: 35px;
+}
+
+.pwrap h2 { 
+    font-weight: normal;
+    padding-left: 30px;
+}
+
+.gcontainer {
+    height: 210px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 100px;
+    gap: 30px;
+}
+
+.gcontainer > div {
+    background: none;
+
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg1 {
+    object-fit: fill;
+    width: 100%;
+    max-height: 100%;
+
+}
+.gi {
+    width: 100%;
+    max-height: 100%;
+    display: block;
+    border: 3px solid darkgray;
+    padding: 10px;
+}
+
+/* End of Project Styles */
+/*================*/
+/* Work & Education Styles, Began 10/25/21 Below will be notes */
+    /* ((NOTES!))
+            (1:44 pm) Will turn education portion & Work portion into Grid 
+            - (5:42pm Finished)
+    */
+    
+.work {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    border-top: 1px solid #5A5A5A;
+    border-bottom: 1px solid #5A5A5A ;
+    background-color: #2d5272;
+    font-family: "Cambria", "Cochin", Georgia, Times, 'Times New Roman', serif;
+    color: whitesmoke;
+}
+
+.work h2 {
+    font-weight: normal;
+    padding-left: 30px;
+}
+
+.workex {
+    display: grid;
+    border: 1px solid darkgray;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+}
+
+.wdetail {
+    padding-left: 10px;
+
+}
+.wdetail h3 {
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+/* ===========================
+Speciality Group, Do not touch */
+h3 {
+    margin-bottom: 2px;
+}
+h3 + p {
+    font-style: italic;
+}
+h3 ~ p {
+    margin: 0 ;
+}
+/* End of Speciality Group 
+========================== */
+
+.edu {
+    padding: 40px;
+    background-color: #546e85;
+    color: white;
+    align-content: center;
+}
+.eduex {
+    margin-bottom: -20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+}
+.edu h2 {
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+/* End of Work & Certification Styles */
+/*================*/
+/* Footer Styles, Began 10/25/21 Below will be notes */
+    /* ((NOTES!))
+    */
+
+.fcontainer {
+    background-color: #242a3f;
+    padding-bottom: 4rem 0 4rem 0;
+    height: 40vh;
+}
+
+.footer {
+    background-color: #242a3f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer-heading h2  {
+    font-weight: 400;
+}
+
+.footer-heading a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-heading a:hover {
+    color: #196f75;
+    transition: 0.3s ease-out;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        height: 50vh; 
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .footer {
+        padding-top: 3rem; 
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .f-3 {
+        display: none;
+    }
+}
